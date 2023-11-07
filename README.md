@@ -17,5 +17,20 @@ below are the types.
   5. Symbol - Main Aim is to create unique indentifiers.
   6. undefined - Indecating that variable is undefined.
   7. null - Indecates delibrate no-values.
-  8. Objects - Other than above data types all the rest are considerd as object. Function, Array, Date, RegExp, Error, Map, Set.
+  8. Objects - Other than above data types all the rest are considerd as object. Function, Array, Date, RegExp, Error, Map, Set
+
+* **Expression and operators** - There are various Expression and operators in JavaScript. Expressions can be considered as 2 types. 
+    a) Assignmemnt - This type of operators assign values to the variables or change the values of the variable. </br>
+        eg:
+```javascript
+  let assignmentEg = 5;
+  assignmentEg = 10; // Here value of a changes
+```
+
+   b) Evaluvate - In this type the various operators are used for evalulate the expression.
+```JavaScript
+  const nnumber1 = 5, number2 = 10;
+  const sum = number1 + number2; //Evaluvating the expression and assigning the value
+  console.log(sum); //15 -> is the output
+```
   
