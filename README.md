@@ -27,10 +27,9 @@ below are the types.
   assignmentEg = 10; // Here value of a changes
 ```
 
-   b) Evaluvate - In this type the various operators are used for evalulate the expression.
+   b) Evaluate - In this type the various operators are used for evaluate the expression.
 ```JavaScript
   const nnumber1 = 5, number2 = 10;
   const sum = number1 + number2; //Evaluvating the expression and assigning the value
   console.log(sum); //15 -> is the output
-```
-  
+``` 
