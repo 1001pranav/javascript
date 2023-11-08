@@ -29,7 +29,32 @@ below are the types.
 
    b) Evaluate - In this type the various operators are used for evaluate the expression.
 ```JavaScript
-  const nnumber1 = 5, number2 = 10;
+  const number1 = 5, number2 = 10;
   const sum = number1 + number2; //Evaluvating the expression and assigning the value
   console.log(sum); //15 -> is the output
-``` 
+```
+* **Operators - Arithmatic operators** ->  The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (/)
+  1. Addition. To add one or more num (+) sign is used.
+```JavaScript
+  const num1 = 5, num2 = 7;
+
+  let sum = num1 + num2; // 12
+  sum += num1;          //17
+```
+There are few execptions for (+) operator. 
+```
+ 5 + 5  = 10           // Here we are adding 2 number.
+'5' + 5 -> '55'       // Here we are concating a number with string resulting a string.
+
++ '5' + 5 -> 10      // (+) sign before a string will try to convert a string to a number,
+                    //If any character is present then the resulting value will be NaN.
+
+'5' + + 5 -> '55'  // As 2nd 5 is a number there is no difference so the resulting value will be string. 
+```
+
+ 2. Subtraction - To subract one or more number (-) is used.
+```JavaScript
+ const num1 = 5, num2 = 7;
+ let sub = num2 - num1;   // 2
+ sub -= num1;            // -3
+```
