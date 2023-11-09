@@ -34,27 +34,33 @@ below are the types.
   console.log(sum); //15 -> is the output
 ```
 * **Operators - Arithmatic operators** ->  The standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (/)
-  1. Addition. To add one or more num (+) sign is used.
+  * Addition. To add one or more num (+) sign is used.
 ```JavaScript
   const num1 = 5, num2 = 7;
 
   let sum = num1 + num2; // 12
   sum += num1;          //17
 ```
-There are few execptions for (+) operator. 
+  There are few execptions for (+) operator. 
+```Javascript
+console.log(5 + 5);    //Output: 10; Here we are adding 2 number.
+console.log('5' + 5);  //Output: '55'; Here we are concating a number with string resulting a string.
+
+console.log(+ '5' + 5);  //Output: 10; (+) sign before a string will try to convert a string to a number,
+                        // If any character is present then the resulting value will be NaN.
+
+console.log('5' + + 5);  // Output: '55';
+                        // As 2nd 5 is a number there is no difference so the resulting value will be string.
+
+console.log([1,2,3,4] + [5,6,7,8,'a']) // Output: '1,2,3,4,5,6,7,8,a'; It will concat string
 ```
- 5 + 5  = 10           // Here we are adding 2 number.
-'5' + 5 -> '55'       // Here we are concating a number with string resulting a string.
 
-+ '5' + 5 -> 10      // (+) sign before a string will try to convert a string to a number,
-                    //If any character is present then the resulting value will be NaN.
-
-'5' + + 5 -> '55'  // As 2nd 5 is a number there is no difference so the resulting value will be string. 
-```
-
- 2. Subtraction - To subract one or more number (-) is used.
+* Subtraction - To subract one or more number (-) is used. If a non number is used like character then NaN will be the output.
 ```JavaScript
  const num1 = 5, num2 = 7;
  let sub = num2 - num1;   // 2
  sub -= num1;            // -3
+ let strNum1 = '5', strNum2 = '15';
+ console.log(strNum2 - strNum2); // output: 10; String will be directly converted to number here.
+ console.log('a' - 5 ); 
 ```
