@@ -13,7 +13,7 @@ JavaScript is a **multi-paradigm**, **dynamic language** with **types** and **op
   below are the types.
   1. Number - Every integer value other than bigInt (both Float and integer value) Maximum value for number type is `9007199254740991` Which can be identified from `Number.MAX_SAFE_INTEGER`
     ```
-      Note. Adding 0 to number will convert the number to Octal.
+      Note. Adding 0 to beginning of the number will convert the number to Octal.
       Similarly 0x10 will convert the number to hex.
       If you check type of both then you will only get number.
     ```
