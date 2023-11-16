@@ -6,7 +6,11 @@
 * [Dynamic Languages](#dynamic-languages)
 * [Data Types](#data-types)
 * [Arrays](/2%20-%20Arrays/README.md#Arrays)
-  
+* [Queue, Stacks](/2%20-%20Arrays/README.md#Push,-Pop,-UnShift,-Shift)
+* [Delete](/2%20-%20Arrays/README.md#Delete)
+* [Merge arrays](/2%20-%20Arrays/README.md#Concat)
+* [Splice](/2%20-%20Arrays/README.md#Splice,-toSpliced)
+
 
 ## Basic information.
 JavaScript is a scripting or programming language that allows you to implement complex features on web pages.

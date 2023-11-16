@@ -35,7 +35,7 @@ Here Push and unshift method takes n argument.
     console.log(array); // Output: [0, 1, 2, 3, 4, 5]
 ```
 
-### Delete.
+### Delete
 For delete the element there are various ways, We can use `splice, delete, filter`.
 If we delete any array data using the delete method then the element will be removed from that position and it will be replaced with 'empty' and type of empty is 'undefined'.
 
