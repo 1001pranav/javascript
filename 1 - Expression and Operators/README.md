@@ -1,4 +1,4 @@
-# Expression and operators**
+# Expression and operators
 ## Variables and Declarations.
 - There are various Expression and operators in JavaScript. Expressions can be considered as 2 types.
 
@@ -63,16 +63,6 @@
   ```javascript
     let assignmentEg = 5;
     assignmentEg = 10;    // Here value of a changes
-  ```
-
-  `Note. Adding 0 to number will convert the number to Octal.`
-  `Similarly 0x10 will convert the number to hex`.
-  `If you check type of both then you will only get number.`
-  ```Javascript
-    let octal = 010;
-    let hex = 0x10;
-    console.log({octal, hex}); // Output: {octal: 8, hex: 16}
-    console.log(typeof octal, typeof hex); // Output: number, number
   ```
 
   3. Evaluate - In this type the various operators are used for evaluate the expression.
