@@ -12,7 +12,7 @@ Arrays have various methods for operations.
 
 ### Push, Pop, UnShift, Shift
 Inserting and deleting to last position - `push, pop`.
-Insert adn delete from 0th index - `unshift, shift`.
+Insert and delete from 0th index - `unshift, shift`.
 
 Here Push and unshift method takes n argument.
 ```Javascript
@@ -35,6 +35,18 @@ Here Push and unshift method takes n argument.
     console.log(array); // Output: [0, 1, 2, 3, 4, 5]
 ```
 
+### Delete.
+For delete the element there are various ways, We can use `splice, delete, filter`.
+If we delete any array data using the delete method then the element will be removed from that position and it will be replaced with 'empty' and type of empty is 'undefined'.
+
+```javascript
+    const data=[1, 2, 3, 4, 5];
+    console.log({data, length: data.length});         //Output: { data: [1, 2, 3, 4, 5], length: 5 }
+    delete data[1];
+    console.log({data, length: data.length});        //Output: { data: [1, empty, 3, 4, 5], length: 5 }
+    console.log("Typeof empty is", typeof data[1]);  //Output: Typeof empty is undefined
+```
+
 ### Concat
 `concat` can be used to merge multiple arrays into one.
 This method can take n arguments.
@@ -45,7 +57,7 @@ This method can take n arguments.
     const arr2 = ['d', 'e', 'f'];
 
     const alphabets = arr1.concat(arr2);
-    console.log(alphabets);
+    console.log(alphabets);  
 ```
 
 ### Splice, toSpliced
@@ -104,10 +116,21 @@ Optional callbackFunction working.
     const numeric = [1, 20, 25, 1000000, 25000]
     numeric.sort((a,b) => a - b);
     console.log(numeric); // [1, 20, 25, 25000, 1000000]
-
-                                    
-
 ```
+
+`toSorted()` - Method works same as sorted, But it wont change the original array.
+```Javascript
+    const  numb = [25, 15, 1, 55, 45];
+    const sortedNumb = numb.toSorted();
+    console.log({numb, sortedNumb});
+    /* Output
+    {
+        numb: [25, 15, 1, 55, 45],
+        sortedNumb: [1, 15, 25, 45, 55]
+    }
+    */
+```
+
 ### ForEach
 ```Javascript
     /*
