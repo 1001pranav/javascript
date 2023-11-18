@@ -10,6 +10,20 @@ Arrays in Javascript can contain Numbers, String, Objects, Arrays etc.
 ## Array Methods.
 Arrays have various methods for operations.
 
+### isArray
+To check if any variable or data is Array we can use `Array.isArray(arr) method`. To this you can pass any data or variable to check if data is array.
+```Javascript
+    const arrayData = [1,2,3.4,5];
+    const objData = {
+        key: arrayData
+    }
+
+    console.log(Array.isArray(arrayData));      // Output: true
+    console.log(Array.isArray(objData));        // Output: false
+    console.log(Array.isArray([1,2,3,4,5]));    // Output: true
+    console.log(Array.isArray(true));           // Output: false
+    console.log(Array.isArray(`[1,2,3,4,5]`));  // Output: false
+``` 
 ### Push, Pop, UnShift, Shift
 Inserting and deleting to last position - `push, pop`.
 Insert and delete from 0th index - `unshift, shift`.
@@ -60,7 +74,7 @@ This method can take n arguments.
     console.log(alphabets);  
 ```
 
-### Splice, toSpliced
+### Splice, toSpliced (Node Version 20.0.0)
 `Splice` - Method is used to Add or Remove data from array from any given position.
 `toSpliced` (Node Version 20.0.0) - In original method (splice) it manipulates original array's to avoid that toSpliced is used. This method is implemented in ECMAScript 2023.
 

@@ -9,6 +9,7 @@
   * [Variables and Declarations](/1%20-%20Expression%20and%20Operators/README.md#Variables-and-Declarations)
   * [Different types of operators](/1%20-%20Expression%20and%20Operators/README.md#Operators)
 * [Arrays](/2%20-%20Arrays/README.md#Arrays)
+  * [checking data is Array](/2%20-%20Arrays/README.md#isArray)
   * [Queue, Stacks](/2%20-%20Arrays/README.md#Push-Pop-UnShift-Shift)
   * [Delete](/2%20-%20Arrays/README.md#Delete)
   * [Merge arrays](/2%20-%20Arrays/README.md#Concat)
