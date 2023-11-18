@@ -1,5 +1,5 @@
 # Expression and operators
-## Variables and Declarations.
+## Variables and Declarations
 - There are various Expression and operators in JavaScript. Expressions can be considered as 2 types.
 
   1. Declarations - To declare and store the data. To declare the variables we use `var`, `let` and `const` are used.

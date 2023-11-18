@@ -5,11 +5,14 @@
 * [Multi Paradigm](#multi-paradigm)
 * [Dynamic Languages](#dynamic-languages)
 * [Data Types](#data-types)
+* [Expression and Operators](/1%20-%20Expression%20and%20Operators/README.md#Expression-and-operators)
+  * [Variables and Declarations](/1%20-%20Expression%20and%20Operators/README.md#Variables-and-Declarations)
+  * [Different types of operators](/1%20-%20Expression%20and%20Operators/README.md#Operators)
 * [Arrays](/2%20-%20Arrays/README.md#Arrays)
-* [Queue, Stacks](/2%20-%20Arrays/README.md#Push,-Pop,-UnShift,-Shift)
-* [Delete](/2%20-%20Arrays/README.md#Delete)
-* [Merge arrays](/2%20-%20Arrays/README.md#Concat)
-* [Splice](/2%20-%20Arrays/README.md#Splice,-toSpliced)
+  * [Queue, Stacks](/2%20-%20Arrays/README.md#Push%2C-Pop%2C-UnShift%2C-Shift)
+  * [Delete](/2%20-%20Arrays/README.md#Delete)
+  * [Merge arrays](/2%20-%20Arrays/README.md#Concat)
+  * [Splice](/2%20-%20Arrays/README.md#Splice%2C-toSpliced)
 
 
 ## Basic information.
