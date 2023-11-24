@@ -246,6 +246,30 @@ Optional callbackFunction working.
     */
 ```
 
+### Every, Some
+* In Javascript to check if all the values in the array matches to conditions then you can use `every()` method, Where you need to pass a function and which should return a boolean value, If value is true for all then the `every()` function return `true`, else it will return `false`.
+
+Consider below example.
+```Javascript
+    const checkIfNumberIsEven = (number) => number % 2 == 0;
+    const array = [2, 4 , 6, 8, 10];
+    console.log(array.every(checkIfNumberIsEven)); //Output: true.
+    array.push(11);
+    console.log(array.every(checkIfNumberIsEven)); //Output: false.
+```
+
+* In Other hand if you want to check if any of array value matches the condtition then you can use `some()` method it works same as `every()` but it will return `true` even if any of one condition matches.
+
+Consider same array example,
+```Javascript
+    const checkIfNumberIsEven = (number) => number % 2 == 0;
+    const array = [2, 4 , 6, 8, 10];
+    console.log(array.some(checkIfNumberIsEven)); //Output: true.
+    array.push(11);
+    console.log(array.some(checkIfNumberIsEven)); //Output: true.
+```
+
+
 ### ForEach
 ```Javascript
     /*
