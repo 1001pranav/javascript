@@ -269,6 +269,21 @@ Consider same array example,
     console.log(array.some(checkIfNumberIsEven)); //Output: true.
 ```
 
+### Flat
+In array if there are nested arrays and all the arrays needs to be one, Then we can use `flat()` method can be used, Where if we dont pass any args then only one nested array is declustered.
+consider following example
+
+```Javascript
+const subArrays = [1,2, [1,2,3], [1,2,[1,2,3]], [1,2,3,[1,2,3,[1,2,3,4]]]];
+
+console.log(subArrays.flat());    //[1, 2, 1, 2, 3, 1, 2, Array(3), 1, 2, 3, Array(4)]
+console.log(subArrays.flat(2));  //[1, 2, 1, 2, 3, 1, 2, 1, 2, 3, 1, 2, 3, 1, 2, 3, Array(4)]
+console.log(subArrays.flat(Infinity)) //[1, 2, 1, 2, 3, 1, 2, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 4]
+```
+
+Note: Here `Infinity` will remove all sub arrays(nested arrays) and make it one.
+
+
 
 ### ForEach
 ```Javascript
