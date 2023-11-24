@@ -175,11 +175,11 @@ You can use concat for shallow copy of the arrays. You just don't pass the args
 ```
 
 
-### Splice, toSpliced (Node Version 20.0.0)
+### Splice, toSpliced
 `Splice` - Method is used to Add or Remove data from array from any given position.
-`toSpliced` (Node Version 20.0.0) - In original method (splice) it manipulates original array's to avoid that toSpliced is used. This method is implemented in ECMAScript 2023.
+`toSpliced (Node Version 20.0.0)` - In original method (splice) it manipulates original array's to avoid that toSpliced is used. This method is implemented in ECMAScript 2023.
 
-Both `splice` and `toSpliced` take the same arguments, where arguments are `(start, deleteCount, insertItem1, insertItem2, ..., insertItemN)`
+Both `splice` and `toSpliced  (Node Version 20.0.0)` take the same arguments, where arguments are `(start, deleteCount, insertItem1, insertItem2, ..., insertItemN)`
 ```Javascript
     const Months = ["January", "February", "March", "April", "May"];
 
@@ -200,7 +200,7 @@ Both `splice` and `toSpliced` take the same arguments, where arguments are `(sta
 ```
 
 
-### Sort, toSorted (Node - 20.0.0)
+### Sort, toSorted
 Javascript provides inbuilt support for sorting. `sort()`
 Sort function takes optional parameter of callbackFunction(a, b).
 The condition for sorting of the function is as below.
@@ -233,7 +233,7 @@ Optional callbackFunction working.
     console.log(numeric); // [1, 20, 25, 25000, 1000000]
 ```
 
-`toSorted()` - Method works same as sorted, But it wont change the original array.
+`toSorted()  (Node - 20.0.0)` - Method works same as sorted, But it wont change the original array.
 ```Javascript
     const  numb = [25, 15, 1, 55, 45];
     const sortedNumb = numb.toSorted();
