@@ -7,6 +7,96 @@ Arrays in Javascript can contain Numbers, String, Objects, Arrays etc.
     console.log(array);
 ```
 
+In Array we are passing the memory of array if we are passing to any function. It means that original array might change if we do any operations on that array.
+
+consider below example
+```Javascript
+    function removeAphaSpclChars(arrays) {
+        arrays.forEach((data, index)=> {
+            if ([NaN, Infinity].includes(+data)) {
+                delete arrays[index];
+            }
+        });
+        return arrays; // This doesn't matter.
+    }
+    const arrays = [1,'21a',2,'a',4,5, '15', "255"];
+    console.log({arrays});
+    /*
+    {
+        arrays: [
+            1,    '21a', 2,
+            'a',  4,     5,
+            '15', '255'
+        ]}
+    */
+    let updatedArrays = removeAphaSpclChars(arrays);
+    console.log({arrays, updatedArrays});
+    /*
+        {
+            arrays: [ 1, <1 empty item>, 2, <1 empty item>, 4, 5, '15', '255' ],
+            updatedArrays: [ 1, <1 empty item>, 2, <1 empty item>, 4, 5, '15', '255' ]
+        }
+    */
+```
+In the above example if you see both arrays and updatedArrays have changed, so there is no need of return statements.
+
+## Shallow Copy
+Shallow copy is used so that original array is not updated or modified.
+Various ways to shallow copies are spread operator `(...)`, `Array.from()`, `arr.filter()`
+
+```Javascript
+const arrays = [1,2,3,4,5];
+let updatedArrays = [...arrays];
+```
+
+```Javascript
+const arrays = [1,2,'24', 'a', 3, 5.6, 'a'];
+function removeAphaSpclChars(arrays) {
+    // Different ways for shallow copy
+    arrays = [...arrays];
+    arrays = Array.from(arrays);
+
+    arrays.forEach((data, index)=> {
+        if ([NaN, Infinity].includes(+data)) {
+            delete arrays[index];
+        }
+    });
+    return arrays; // This doesn't matter.
+}
+    let updatedArrays = removeAphaSpclChars(arrays);
+    console.log({arrays, updatedArrays});
+```
+
+```Javascript
+    const arr = [1,23,4,5,6];
+    const newArrays = arr.concat();
+    arr.forEach((data, index)=> {
+        arr[index]  *= arr[index];
+    });
+    console.log({arr, newArrays});
+```
+
+Note: Just to demonstrate Array.forEach loop has been used, In above situation we can simply use `filter()` where, this method returns a new array without changing the original array. To check more about Filter you can check [Filters, Reduce](#filter-and-reduce)
+
+Different solution.
+```Javascript
+function removeAphaSpclChars(arrays) {
+    return arrays.filter((arrayData)=> !([NaN, Infinity].includes(+arrayData)));
+}
+const array = [1,'21a',2,'a',4,5, '15', "255"];
+const updatedArrays = removeAphaSpclChars(array)
+console.log({array, updatedArrays});
+/*
+{
+  array: [
+    1,    '21a', 2,
+    'a',  4,     5,
+    '15', '255'
+  ],
+  updatedArrays: [ 1, 2, 4, 5, '15', '255' ]
+}
+*/
+```
 ## Array Methods.
 Arrays have various methods for operations.
 
@@ -23,7 +113,8 @@ To check if any variable or data is Array we can use `Array.isArray(arr) method`
     console.log(Array.isArray([1,2,3,4,5]));    // Output: true
     console.log(Array.isArray(true));           // Output: false
     console.log(Array.isArray(`[1,2,3,4,5]`));  // Output: false
-``` 
+```
+
 ### Push, Pop, UnShift, Shift
 Inserting and deleting to last position - `push, pop`.
 Insert and delete from 0th index - `unshift, shift`.
@@ -71,8 +162,18 @@ This method can take n arguments.
     const arr2 = ['d', 'e', 'f'];
 
     const alphabets = arr1.concat(arr2);
-    console.log(alphabets);  
+    console.log(alphabets);
 ```
+You can use concat for shallow copy of the arrays. You just don't pass the args
+```Javascript
+    const arr = [1,23,4,5,6];
+    const newArrays = arr.concat();
+    arr.forEach((data, index)=> {
+        arr[index]  *= arr[index];
+    });
+    console.log({arr, newArrays});
+```
+
 
 ### Splice, toSpliced (Node Version 20.0.0)
 `Splice` - Method is used to Add or Remove data from array from any given position.
