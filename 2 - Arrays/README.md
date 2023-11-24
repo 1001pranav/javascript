@@ -284,6 +284,39 @@ console.log(subArrays.flat(Infinity)) //[1, 2, 1, 2, 3, 1, 2, 1, 2, 3, 1, 2, 3, 
 Note: Here `Infinity` will remove all sub arrays(nested arrays) and make it one.
 
 
+### Filter and reduce
+* Filter is used to remove the data according to boolean value returned by the callback function.
+If the callback function returns -
+    `true` - Then value will be present in the array,
+    `false`  - Then value will be removed from the array.
+* Reduce - This will return a number which will return number according to logic in callback function.
+In callbackFunction expects 2 required params and 2 optional params (`accumulators`, `currentValue`, `currentIndex`, `array`).
+
+`accumulators` - This will hold the callback returned value.
+`currentValue` - This contains the currentValue of the array.
+`currentIndex` - This has the current index value.
+`array` - This is Array which reduce has called upon
+check below example.
+```javascript
+    const array = [1,2,4, 5, 7, 9, 'a', '1', "12"];
+    function sumOfNumbers(array) {
+        array = array.filter((checkNumber) => !([NaN, Infinity].includes(+checkNumber)));
+        console.log(array);
+        return array.reduce((sum, number) => sum + +number, 0 );
+    }
+    let sum = sumOfNumbers(array);
+    console.log(sum);
+```
+
+```Javascript
+const array = [1, 2, 3, 4, 5, 6];
+const sum = array.reduce((sum, currNumber, currIndex, array) => {
+    array[currIndex] *= currNumber; //This will update original array.
+    return sum + currNumber;
+});
+console.log({sum, array});
+```
+
 
 ### ForEach
 ```Javascript
