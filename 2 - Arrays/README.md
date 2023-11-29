@@ -294,6 +294,22 @@ console.log(subArrays.flat(Infinity)) //[1, 2, 1, 2, 3, 1, 2, 1, 2, 3, 1, 2, 3, 
 
 Note: Here `Infinity` will remove all sub arrays(nested arrays) and make it one.
 
+### FlatMap
+In the above method it will map through the array and then the returned value it will be flatten.
+This is similar to `[arr.map(...args).flat()]` it is more efficient.
+
+```Javascript
+const arr = [{
+        user_id: 1,
+        opponent_id: 2
+    },{
+        user_id: 3,
+        opponent_id: 4
+    }];
+
+    const userOpponents = arr.flatMap(({user_id, opponent_id})=> [user_id, opponent_id]);
+    console.log(userOpponents); // Output: [1,2,3,4]
+```
 
 ### Filter and Reduce
 * Filter is used to remove the data according to boolean value returned by the callback function.
