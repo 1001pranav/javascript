@@ -357,6 +357,17 @@ const data = array.find((element, index, array) => element === numberToFind);
 
 ```
 
+### At
+**UseCase** - If we want to use negative index then we can use at method, This holds good for both arrays and strings.
+
+```Javascript
+const array = [1,2,3,4,5];
+console.log(array.at(-1), array.at(-2)); //Output: 5, 4
+console.log(array.at(0), array.at(1)); // Output: 1, 2
+```
+
+```
+
 
 
 ### ForEach
