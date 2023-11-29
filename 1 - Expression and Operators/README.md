@@ -77,7 +77,7 @@
 ## Operators
 - **Arithmetic operators** -> The standard arithmetic operators are addition (+), subtraction (-), multiplication (\*), and division (/).
 
-  - Addition. To add one or more num (+) sign is used.
+  - *Addition*. To add one or more num (+) sign is used.
 
     ```JavaScript
     let num1 = 5, num2 = 7;
@@ -108,8 +108,8 @@
     console.log([1,2,3,4] + [5,6,7,8,'a']) // Output: '1,2,3,4,5,6,7,8,a'; It will concatenate string
     ```
 
-  - Subtraction - To subtract one or more number (-) is used. If a non number is used like character then NaN will be the output.
-
+  - *Subtraction* - To subtract one or more number (-) is used. If a non number is used like character then NaN will be the output.
+  If we have stringified number then it will be converted to number then output will be number.
     ```JavaScript
     let num1 = 5, num2 = 7;
     let sub = num2 - num1;   // 2
@@ -125,7 +125,8 @@
 
     ```
 
-  - Multiplication - To multiply one or more number (\*) is used to multiply numbers.
+  - *Multiplication* - To multiply one or more number (\*) is used to multiply numbers.
+  If we have stringified number then it will be converted to number then output will be number.
   ```JavaScript
   let num1 = 5, num2 = 25, mul;
 
@@ -145,7 +146,9 @@
   console.log(str * strNum); //Output: NaN
   ```
 
-  - Division - To divide any 2 number we use (/) operator. If you divide any number with zero (0) then output will be `Infinity`.
+  - Division - To divide any 2 number we use (/) operator.
+  If you divide any number with zero (0) then output will be `Infinity`.
+  If we have stringified number then it will be converted to number then output will be number.
 
   ```javascript
   let num1 = 10, num2 = 5;
@@ -157,6 +160,7 @@
   ```
 
   - Reminder (Modulus) - To calculate the remainder of any 2 numbers we use (%) operator.
+  If we have stringified number then it will be converted to number then output will be number.
 
   ```Javascript
   let num1 = 4, num2 = 2
