@@ -7,6 +7,16 @@ Arrays in Javascript can contain Numbers, String, Objects, Arrays etc.
     console.log(array);
 ```
 
+We can use `new` to create initialize the array, if we pass any one number then it will create that many number of empty memory in array. If you pass more than one arguments then it will insert those array data.
+
+```Javascript
+const array = new Array(5);
+console.log(array); // output: [undefined, undefined, undefined, undefined, undefined]
+
+const arrays = new Array("First", "Second");
+console.log(arrays); //Output: ["First", "Second"]
+```
+
 In Array we are passing the memory of array if we are passing to any function. It means that original array might change if we do any operations on that array.
 
 consider below example
