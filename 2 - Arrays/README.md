@@ -107,6 +107,7 @@ console.log({array, updatedArrays});
 }
 */
 ```
+
 ## Array Methods.
 Arrays have various methods for operations.
 
@@ -294,7 +295,7 @@ console.log(subArrays.flat(Infinity)) //[1, 2, 1, 2, 3, 1, 2, 1, 2, 3, 1, 2, 3, 
 Note: Here `Infinity` will remove all sub arrays(nested arrays) and make it one.
 
 
-### Filter and reduce
+### Filter and Reduce
 * Filter is used to remove the data according to boolean value returned by the callback function.
 If the callback function returns -
     `true` - Then value will be present in the array,
@@ -326,6 +327,36 @@ const sum = array.reduce((sum, currNumber, currIndex, array) => {
 });
 console.log({sum, array});
 ```
+
+### Find, FindIndex, FindLast, FindLastIndex
+FindLast and FindLastIndex works only from node version 18.0.0. All 4 methods takes 2 methods
+callbackFn(element, index, array)
+    element = current array value.
+    index = current index.
+    array = current array where find was called upon.
+thisArgs.
+
+```Javascript
+const array = [11, 25, 11, 13, 25, 11, 13];
+const numberToFind = 11;
+
+// If number is not found then it will return undefined else it will return that number.
+//The findLast will start searching from the last index.
+const data = array.findLast((element, index, array) => {
+    return element === numberToFind;
+});
+
+//If number is not found then it will return -1 else it will return the index of the found element.
+//Even this will start searching from last index.
+const indexData = array.findLastIndex((element, index, array) => {
+    return element === numberToFind;
+});
+
+//This is same as
+const data = array.find((element, index, array) => element === numberToFind);
+
+```
+
 
 
 ### ForEach
