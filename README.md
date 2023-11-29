@@ -3,8 +3,8 @@
 ### Table content.
 * [Basic information](#basic-information)
 * [Multi Paradigm](#multi-paradigm)
-* [Dynamic Languages](#dynamic-languages)
-* [Data Types](#data-types)
+* [Dynamic Languages](#Dynamic-language)
+* [Data Types](#Types)
 * [Expression and Operators](/1%20-%20Expression%20and%20Operators/README.md#Expression-and-operators)
   * [Variables and Declarations](/1%20-%20Expression%20and%20Operators/README.md#Variables-and-Declarations)
   * [Different types of operators](/1%20-%20Expression%20and%20Operators/README.md#Operators)
