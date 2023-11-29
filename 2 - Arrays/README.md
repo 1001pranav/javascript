@@ -379,6 +379,25 @@ console.log(iterator.next().value);
 console.log(iterator.next().value);
 ```
 
+### Fill
+If you want to change the elements in array with default value then we can use fill().
+fill takes 3 params. Value, start, end.
+`value` - This represents what will be filled.
+`start` - From what position should start filling the value. Default it will be 0.
+`end` - This will fill till the position, Default is array length - 1.
+
+```Javascript
+const array = [1, 2, 3, 4];
+array.fill(0);
+console.log(array); //Output: [0,0,0,0]
+
+const preFillArray = new Array(5).fill(1);
+/*
+    The logic above code is new Array(5) will create 5 undefined values.
+    fill method will replace 1 in all 5 undefined values.
+*/
+console.log(preFillArray); //Output: [1, 1, 1, 1, 1]
+```
 
 
 ### ForEach
