@@ -366,6 +366,17 @@ console.log(array.at(-1), array.at(-2)); //Output: 5, 4
 console.log(array.at(0), array.at(1)); // Output: 1, 2
 ```
 
+### Entries
+This function is used to convert array to object where index of the array is key and array value is object value.
+```Javascript
+const array = [11,22,33,44,55];
+for (let [index, element] of array.entries()) {
+    console.log({index, element});
+}
+
+const iterator = array.entries();
+console.log(iterator.next().value);
+console.log(iterator.next().value);
 ```
 
 
