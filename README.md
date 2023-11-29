@@ -13,7 +13,15 @@
   * [Queue, Stacks](/2%20-%20Arrays/README.md#Push-Pop-UnShift-Shift)
   * [Delete](/2%20-%20Arrays/README.md#Delete)
   * [Merge arrays](/2%20-%20Arrays/README.md#Concat)
-  * [Splice](/2%20-%20Arrays/README.md#Splice-toSpliced)
+  * [Splice and toSpliced](/2%20-%20Arrays/README.md#Splice-toSpliced)
+  * [Sort and toSorted](/2%20-%20Arrays/README.md#Sort-toSorted)
+  * [Every and some](/2%20-%20Arrays/README.md#Every-Some)
+  * [Flat](/2%20-%20Arrays/README.md#Splice-toSpliced)
+  * [Filter and reduce ](/2%20-%20Arrays/README.md#Filter-and-Reduce)
+  * [Find and findLast using indexes](/2%20-%20Arrays/README.md#Find-FindIndex-FindLast-FindLastIndex)
+  * [At](/2%20-%20Arrays/README.md#At)
+  * [Entries](/2%20-%20Arrays/README.md#Entries)
+
 
 
 ## Basic information.
