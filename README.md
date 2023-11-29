@@ -1,6 +1,6 @@
 # Javascript
 
-## Table content.
+### Table content.
 * [Basic information](#basic-information)
 * [Multi Paradigm](#multi-paradigm)
 * [Dynamic Languages](#dynamic-languages)
@@ -16,11 +16,13 @@
   * [Splice and toSpliced](/2%20-%20Arrays/README.md#Splice-toSpliced)
   * [Sort and toSorted](/2%20-%20Arrays/README.md#Sort-toSorted)
   * [Every and some](/2%20-%20Arrays/README.md#Every-Some)
-  * [Flat](/2%20-%20Arrays/README.md#Splice-toSpliced)
+  * [Flat](/2%20-%20Arrays/README.md#Flat)
+  * [flatMaps](/2%20-%20Arrays/README.md#FlatMap)
   * [Filter and reduce ](/2%20-%20Arrays/README.md#Filter-and-Reduce)
   * [Find and findLast using indexes](/2%20-%20Arrays/README.md#Find-FindIndex-FindLast-FindLastIndex)
   * [At](/2%20-%20Arrays/README.md#At)
   * [Entries](/2%20-%20Arrays/README.md#Entries)
+  * [Fill](/2%20-%20Arrays/README.md#Fill)
 
 
 
