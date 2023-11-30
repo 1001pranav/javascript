@@ -2,8 +2,8 @@
 
 ### Table content.
 * [Basic information](#basic-information)
-* [Multi Paradigm](#multi-paradigm)
-* [Dynamic Languages](#Dynamic-language)
+* [Multi Paradigm](#Multi-Paradigm)
+* [Dynamic Languages](#Dynamic-Language)
 * [Data Types](#Types)
 * [Expression and Operators](/1%20-%20Expression%20and%20Operators/README.md#Expression-and-operators)
   * [Variables and Declarations](/1%20-%20Expression%20and%20Operators/README.md#Variables-and-Declarations)
