@@ -414,33 +414,3 @@ const preFillArray = new Array(5).fill(1);
 */
 console.log(preFillArray); //Output: [1, 1, 1, 1, 1]
 ```
-
-
-### ForEach
-```Javascript
-    /*
-        forEach method takes callback function as parameter.
-
-        Callback function takes 3 parameters.
-        1. element - Each element of the array.
-        2. index - Current index of the array.
-        3. Array(arry) - array which was called upon.
-
-        This function does not return anything.
-    */
-
-    array.forEach((element, index, arry) => {
-        console.log({element, index, arry});
-    });
-
-    /*
-    OUTPUT:
-        {element: 1, index: 0, arry: [1,2,3,4,5]}
-        {element: 2, index: 1, arry: [1,2,3,4,5]}
-        {element: 3, index: 2, arry: [1,2,3,4,5]}
-        {element: 4, index: 3, arry: [1,2,3,4,5]}
-        {element: 5, index: 4, arry: [1,2,3,4,5]}
-    */
-
-```
-forEach is synchronous so 
