@@ -24,13 +24,13 @@
   * [Entries](/2%20-%20Arrays/README.md#Entries)
   * [Fill](/2%20-%20Arrays/README.md#Fill)
 * [ECMAScript 2023](/ES2023/README.md#ES2023)
-* [Array Methods](/ES2023/README.md#Array-methods)
-  * [Find last method](/ES2023/README.md#FindLast-and-FindLastIndex)
-  * [Reversing and creating new array](/ES2023/README.md#ToReversed)
-  * [Sorting and creating new array](/ES2023/README.md#toSorted)
-  * [updating existing methods and new array](/ES2023/README.md#With)
-* [Hashbang Grammer](/ES2023/README.md#Hashbang-grammer)
-* [Symbols as weak map key](/ES2023/README.md#Symbols-as-Weakmap-key)
+  * [Array Methods](/ES2023/README.md#Array-methods)
+    * [Find last method](/ES2023/README.md#FindLast-and-FindLastIndex)
+    * [Reversing and creating new array](/ES2023/README.md#ToReversed)
+    * [Sorting and creating new array](/ES2023/README.md#toSorted)
+    * [updating existing methods and new array](/ES2023/README.md#With)
+  * [Hashbang Grammer](/ES2023/README.md#Hashbang-grammer)
+  * [Symbols as weak map key](/ES2023/README.md#Symbols-as-Weakmap-key)
 
 ## Basic information.
 JavaScript is a scripting or programming language that allows you to implement complex features on web pages.
