@@ -1,6 +1,8 @@
 # Expression and operators
 ## Variables and Declarations
 - There are various Expression and operators in JavaScript. Expressions can be considered as 2 types.
+  * Variables can have $, _, digit, or number as variable name
+  * Most important thing is we variable names cannot start with digit.
 
   1. Declarations - To declare and store the data. To declare the variables we use `var`, `let` and `const` are used.
 
@@ -16,13 +18,18 @@
     console.log("current value of mutateExample after executing inner scope:", mutateExample); // Output: current value of mutateExample after executing inner scope: Hello, From inner Scope.
   ```
 
-  - One more disadvantage is if we try to access variable before declaration that will give undefined instead of throwing error. Consider following example.
-
-  ```Javascript
-    console.log("Before defining -", undefinedExample);   //Output: "Before defining - undefined".
-    var undefinedExample = "Not throwing error";
-    console.log("After defining - "undefinedExample); //Output: "After defining - Not throwing error"
-  ```
+    ### Hoisting
+    * Hoisting refers to moving the declaration of variables with `var` moving to the top of the scope.
+    * Which means you can access anywhere without within the scope.
+    * If you initialize variable while declaration then it will return undefined until the initialization of variable.
+    * In case of function hoisted fully. But in case if `var` only declaration are hoisted.
+    `Note: let or const are also hoisted but it will throw error ReferenceError if tried to access the variable.`
+    consider following example.
+    ```Javascript
+      console.log("Before defining -", undefinedExample);   //Output: "Before defining - undefined".
+      var undefinedExample = "Not throwing error";
+      console.log("After defining - "undefinedExample); //Output: "After defining - Not throwing error"
+    ```
 
   - `let` - This allows to declare variables inside of local scope without effecting the global scope.
 
