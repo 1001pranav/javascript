@@ -24,8 +24,10 @@ Javascript has various data types, Most of the data types are dynamically added 
     ```Javascript
       let octal = 010;
       let hex = 0x10;
-      console.log({octal, hex}); // Output: {octal: 8, hex: 16}
-      console.log(typeof octal, typeof hex); // Output: number, number
+      let binary = 0b10;
+      let decimal = 110;
+      console.log({octal, hex, binary, decimal}); // Output: {octal: 8, hex: 16, binary: 2, decimal: 110}
+      console.log(typeof octal, typeof hex, typeof binary, typeof decimal); // Output: number, number, number, number
     ```
   2. **Bigint** - Number which exceeds the number data types are termed as bigint.
   3. **String** - Used for storing text types.
