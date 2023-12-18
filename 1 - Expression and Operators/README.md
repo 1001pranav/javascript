@@ -12,8 +12,8 @@
     var mutateExample = "Hello, From outer Scope.";
     console.log("current value of mutateExample before executing inner scope: ", mutateExample);  //Output: current value of mutateExample: Hello, From outer Scope.
     if (true) {
-    var mutateExample = "Hello, From inner Scope";
-    console.log("current value of mutateExample executing inner scope:", mutateExample); // Output: current value of mutateExample executing inner scope: Hello, From inner Scope.
+      var mutateExample = "Hello, From inner Scope";
+      console.log("current value of mutateExample executing inner scope:", mutateExample); // Output: current value of mutateExample executing inner scope: Hello, From inner Scope.
     }
     console.log("current value of mutateExample after executing inner scope:", mutateExample); // Output: current value of mutateExample after executing inner scope: Hello, From inner Scope.
   ```
@@ -37,8 +37,8 @@
     let a = 10;
     console.log("Value of 'a' before local scope (Global scope) execution", a); //Output: Value of 'a' before local scope (Global scope) execution 10
     {
-    let a = 20;
-    console.log("Value of 'a' inside local scope" ,a); //Output: Value of 'a' inside local scope 20
+      let a = 20;
+      console.log("Value of 'a' inside local scope" ,a); //Output: Value of 'a' inside local scope 20
     }
     console.log("Value of 'a' outside local scope", a); //Output: Value of 'a' outside local scope 10
   ```
@@ -102,55 +102,55 @@
     There are few exceptions for (+) operator.
 
     ```Javascript
-    console.log(5 + 5);    //Output: 10; Here we are adding 2 number.
+      console.log(5 + 5);    //Output: 10; Here we are adding 2 number.
 
-    console.log('5' + 5);  //Output: '55'; Here we are concatenation a number with string resulting a string.
+      console.log('5' + 5);  //Output: '55'; Here we are concatenation a number with string resulting a string.
 
-    console.log(+ '5' + 5);  //Output: 10; (+) sign before a string will try to convert a string to a number,
-                            // If any character is present then the resulting value will be NaN.
+      console.log(+ '5' + 5);  //Output: 10; (+) sign before a string will try to convert a string to a number,
+                              // If any character is present then the resulting value will be NaN.
 
-    console.log('5' + + 5);  // Output: '55';
-                            // As 2nd 5 is a number there is no difference so the resulting value will be string.
+      console.log('5' + + 5);  // Output: '55';
+                              // As 2nd 5 is a number there is no difference so the resulting value will be string.
 
-    console.log([1,2,3,4] + [5,6,7,8,'a']) // Output: '1,2,3,4,5,6,7,8,a'; It will concatenate string
+      console.log([1,2,3,4] + [5,6,7,8,'a']) // Output: '1,2,3,4,5,6,7,8,a'; It will concatenate string
     ```
 
   - *Subtraction* - To subtract one or more number (-) is used. If a non number is used like character then NaN will be the output.
   If we have stringified number then it will be converted to number then output will be number.
     ```JavaScript
-    let num1 = 5, num2 = 7;
-    let sub = num2 - num1;   // 2
+      let num1 = 5, num2 = 7;
+      let sub = num2 - num1;   // 2
 
-    sub -= num1;            // -3
-    let strNum1 = '5', strNum2 = '15';
+      sub -= num1;            // -3
+      let strNum1 = '5', strNum2 = '15';
 
-    console.log(strNum2 - strNum2); // Output: 10; String will be directly converted to number here.
-    console.log('a' - 5 );         // Output: NaN;
+      console.log(strNum2 - strNum2); // Output: 10; String will be directly converted to number here.
+      console.log('a' - 5 );         // Output: NaN;
 
-    console.log(num1--); // Output: 5; After execution, The number will be reduced by 1.
-    console.log(--num1); //Output: 3; Here before execution number will be reduced by 1
+      console.log(num1--); // Output: 5; After execution, The number will be reduced by 1.
+      console.log(--num1); //Output: 3; Here before execution number will be reduced by 1
 
     ```
 
   - *Multiplication* - To multiply one or more number (\*) is used to multiply numbers.
   If we have stringified number then it will be converted to number then output will be number.
   ```JavaScript
-  let num1 = 5, num2 = 25, mul;
+    let num1 = 5, num2 = 25, mul;
 
-  mul = num1 * num2; //(*) is used to multiply numbers.
-  console.log(mul); // Output: 125;
+    mul = num1 * num2; //(*) is used to multiply numbers.
+    console.log(mul); // Output: 125;
 
-  // To Multiply and assign to one variable we can use (*=) For example.
-  mul *= num1
-  console.log(mul);// Output: 625;
+    // To Multiply and assign to one variable we can use (*=) For example.
+    mul *= num1
+    console.log(mul);// Output: 625;
 
-  //Similar to subtraction if stringified numbers are present then it will be automatically converted to number.
-  let strNum ='15';
-  console.log(strNum * num1); // Output: 75
+    //Similar to subtraction if stringified numbers are present then it will be automatically converted to number.
+    let strNum ='15';
+    console.log(strNum * num1); // Output: 75
 
-  //Similarly if we try to multiply any non number then output will be NaN. Eg.
-  let str = 'a';
-  console.log(str * strNum); //Output: NaN
+    //Similarly if we try to multiply any non number then output will be NaN. Eg.
+    let str = 'a';
+    console.log(str * strNum); //Output: NaN
   ```
 
   - Division - To divide any 2 number we use (/) operator.
@@ -158,19 +158,19 @@
   If we have stringified number then it will be converted to number then output will be number.
 
   ```javascript
-  let num1 = 10, num2 = 5;
-  console.log(num1/num2); // Output: 2;
+    let num1 = 10, num2 = 5;
+    console.log(num1/num2); // Output: 2;
 
-  console.log(num1/0); // Output: Infinity
+    console.log(num1/0); // Output: Infinity
 
-  num1 /= num2;
+    num1 /= num2;
   ```
 
   - Reminder (Modulus) - To calculate the remainder of any 2 numbers we use (%) operator.
   If we have stringified number then it will be converted to number then output will be number.
 
   ```Javascript
-  let num1 = 4, num2 = 2
+    let num1 = 4, num2 = 2
 
-  console.log(num1% num2); // Output: 0;
+    console.log(num1% num2); // Output: 0;
   ```
