@@ -108,6 +108,117 @@ console.log({array, updatedArrays});
 */
 ```
 
+## Deep Copy
+Shallow copy wont be effected if there is nested array or nested object.
+```JavaScript
+    const userP = {
+        userName: 'Pranav',
+        age: 25,
+        address: {
+            taluk: 'Kundapur',
+            city: 'Kundapur',
+            state: 'Karnataka'
+        },
+        tags: ['Node.js', 'MySQL', 'PostgreSQL']
+    };
+
+    const userB = {...userP};
+    userB.userName = 'Ben';
+    userB.age = 29;
+    userB.address.taluk = 'Mangaluru';
+    userB.address.city = 'Mangaluru';
+    userB.address.state = 'Karnataka';
+    userB.tags.push('AWS');
+
+    console.log(JSON.stringify(userP), JSON.stringify(userB));
+    /*
+        {
+            "userName":"Pranav",
+            "age":25,
+            "address":{
+                "taluk":"Mangaluru",
+                "city":"Mangaluru",
+                "state":"Karnataka"
+            },
+            "tags":[
+                "Node.js",
+                "MySQL",
+                "PostgreSQL",
+                "AWS"
+            ]
+        }
+        {
+            "userName":"Ben",
+            "age":29,
+            "address":{
+                "taluk":"Mangaluru",
+                "city":"Mangaluru",
+                "state":"Karnataka"
+            },
+            "tags":[
+                "Node.js",
+                "MySQL",
+                "PostgreSQL",
+                "AWS"
+            ]
+        }
+    */
+```
+The solution of the above problem is deep Copy.
+The nested Arrays and nested objects still refers the original value.
+```Javascript
+    const userP = {
+        userName: 'Pranav',
+        age: 25,
+        address: {
+            taluk: 'Kundapur',
+            city: 'Kundapur',
+            state: 'Karnataka'
+        },
+        tags: ['Node.js', 'MySQL', 'PostgreSQL']
+    };
+
+    const userB = JSON.parse(JSON.stringify(userP));
+    userB.userName = 'Ben';
+    userB.age = 29;
+    userB.address.taluk = 'Mangaluru';
+    userB.address.city = 'Mangaluru';
+    userB.address.state = 'Karnataka';
+    userB.tags.push('AWS');
+
+    console.log(JSON.stringify(userP), JSON.stringify(userB));
+    /*
+        {
+            "userName":"Pranav",
+            "age":25,
+            "address":{
+                "taluk":"Kundapur",
+                "city":"Kundapur",
+                "state":"Karnataka"
+            },
+            "tags":[
+                "Node.js",
+                "MySQL",
+                "PostgreSQL"
+            ]
+        } {
+            "userName":"Ben",
+            "age":29,
+            "address":{
+                "taluk":"Mangaluru",
+                "city":"Mangaluru",
+                "state":"Karnataka"
+            },
+            "tags":[
+                "Node.js",
+                "MySQL",
+                "PostgreSQL",
+                "AWS"
+            ]
+        }
+    */
+```
+
 ## Array Methods.
 Arrays have various methods for operations.
 
