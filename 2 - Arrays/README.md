@@ -525,3 +525,20 @@ const preFillArray = new Array(5).fill(1);
 */
 console.log(preFillArray); //Output: [1, 1, 1, 1, 1]
 ```
+
+### slice
+When we want to get portion of the array from the original array without modifying the original array then we can use slice method.
+
+```Javascript
+    const array = [1,2,3, 25, 30, 35, 40];
+    const start = 3 // 0th based index or negative index
+    const end = array.length; // final array
+    const subArray = array.slice(start, end);
+```
+
+We can also use slice of shallow copying the array.
+
+```Javascript
+const array = [ 2, 4, 6, 8, 10];
+const newArray = array.slice();
+```
