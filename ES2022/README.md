@@ -105,14 +105,47 @@ const user = {
 
 console.log(Object.hasOwn(user, "Age")); //False;
 ```
+## Regexp match indices
+Added indices Where it will return the start and end index of all matched regular expression
 
+```Javascript
+    const ipAddressRegex = /([1-255]+[0-255]*[0-255]*).([1-255]+[0-255]*[0-255]*).([1-255]+[0-255]*[0-255]*).([1-255]+[0-255]*[0-255]*)/.exec("1.255.1.1");
+    console.log(ipAddressRegex);
+    /*
+    [
+        0: "1.255.1.1"
+        1: "1"
+        2: "255"
+        3: "1"
+        4: "1"
+        groups: undefined
+        index: 0
+        indices:
+        [
+            0: [0, 9]
+            1: [0, 1]
+            2: [2, 5]
+            3: [6, 7]
+            4: [8, 9]
+        ]
+    ]
+    */
+```
 ## Error Cause
 This is used when we need to re-throw error by using specific error message.
 ```Javascript
-try {
-    throw new Error("trowing Error");
+function causeExample() {
+    try {
+        throw new Error("trowing Error");
+    }
+    catch (e){
+        throw new Error (e, { cause: "Feature not yet implemented"});
+    }
 }
-catch (e){
-throw new Error (e, { cause: "Feature not yet implemented"})
+try {
+    causeExample();
+}
+catch(e) {
+    console.log("Error is:", e);
 }
 ```
