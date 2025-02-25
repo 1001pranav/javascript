@@ -92,6 +92,11 @@ Then we can run the file without node.
 
 ## Symbols as Weakmap key
 If you know about weakmap then you might know the disadvantage of weakmap, If not will let you know disadvantage of weakmap.
+Weakmap is a collection of key-value pairs where the key is always an object and value can be anything, Weakmap is useful 
+
+when we want to store data in object as key but we don't want to keep the object reference till we remove the data from weakmap.
+
+Disadvantage of weakmap is that it can cause memory leak if we use strings or numbers as key, because strings and numbers are not objects and they are not garbage collected.
 
 In weakmap keys can only be objects and it should be unique, Because of this there is a problem of memory leak. If you know about the Symbols, then you know that symbols will be unique with same string, So we can use symbols as weakmap key.
 
