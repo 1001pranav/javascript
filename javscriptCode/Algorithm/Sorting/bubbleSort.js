@@ -11,6 +11,6 @@ function bubbleSort(arr) {
     }
 }
 
-let sort = [25,1,3,12,55,62];
+const sort = [93,62,55,40, 33, 21, 12, 5, 4, 2, 1];
 bubbleSort(sort);
 console.log(sort);

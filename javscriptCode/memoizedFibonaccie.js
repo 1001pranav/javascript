@@ -1,5 +1,8 @@
 function memoizedFib(n, cache = [1,1]) {
-    console.log(n)
+    console.log();
+    console.log(` n = ${n}`);
+    console.log(` cache = ${cache}`);
+
     if (cache[n]) {
         // console.log(cache, n)
         return cache[n];
@@ -10,10 +13,10 @@ function memoizedFib(n, cache = [1,1]) {
     5 => (4,  3) => [1,1]
           3 2 3 2
 */
-// const normalFib = (n) => {
-//     return n < 2? 1: normalFib(n-1)+ normalFib(n-2);
-// }
+const normalFib = (n) => {
+    return n < 2? 1: normalFib(n-1)+ normalFib(n-2);
+}
 const fib = memoizedFib(5);
 // const normalFibAns = normalFib(5);
-console.log(fib);
-// console.log(normalFibAns);
+console.log("Fibonacci", fib);
+// console.log(normalFib(5));
