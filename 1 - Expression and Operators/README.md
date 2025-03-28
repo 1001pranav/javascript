@@ -18,18 +18,6 @@
     console.log("current value of mutateExample after executing inner scope:", mutateExample); // Output: current value of mutateExample after executing inner scope: Hello, From inner Scope.
   ```
 
-    ### Hoisting
-    * Hoisting refers to moving the declaration of variables with `var` moving to the top of the scope.
-    * Which means you can access anywhere without within the scope.
-    * If you initialize variable while declaration then it will return undefined until the initialization of variable.
-    * In case of function hoisted fully. But in case if `var` only declaration are hoisted.
-    `Note: let or const are also hoisted but it will throw error ReferenceError if tried to access the variable.`
-    consider following example.
-    ```Javascript
-      console.log("Before defining -", undefinedExample);   //Output: "Before defining - undefined".
-      var undefinedExample = "Not throwing error";
-      console.log("After defining - "undefinedExample); //Output: "After defining - Not throwing error"
-    ```
 
   - `let` - This allows to declare variables inside of local scope without effecting the global scope.
 
@@ -82,6 +70,7 @@
 
 
 ## Operators
+
 - **Arithmetic operators** -> The standard arithmetic operators are addition (+), subtraction (-), multiplication (\*), and division (/).
 
   - *Addition*. To add one or more num (+) sign is used.
@@ -174,3 +163,20 @@
 
     console.log(num1% num2); // Output: 0;
   ```
+
+
+## Hoisting
+* Hoisting refers to moving the declaration of variables with `var` moving to the top of the scope.
+* Which means you can access anywhere without within the scope.
+* If you initialize variable while declaration then it will return undefined until the initialization of variable.
+* In case of function hoisted fully. But in case if `var` only declaration are hoisted.
+`Note: let or const are also hoisted but it will throw error ReferenceError if tried to access the variable. Because it will be in “temporal dead zone”`
+consider following example.
+```Javascript
+  console.log("Before defining -", undefinedExample);   //Output: "Before defining - undefined".
+  var undefinedExample = "Not throwing error";
+  console.log("After defining - "undefinedExample); //Output: "After defining - Not throwing error"
+```
+
+## Binding
+

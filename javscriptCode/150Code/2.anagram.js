@@ -1,3 +1,13 @@
+
+/*
+2. Valid Anagram
+
+📌 Problem: Two words are anagrams if you can rearrange the letters of one word to make the other.
+📝 Example:
+🔹 "listen" and "silent" are anagrams because they have the same letters.
+🔹 "cat" and "bat" are NOT anagrams because they have different letters.
+*/
+
 const anagram = (first, second) => {
     first = first.toLowerCase();
     first = first.split("").sort().join("");

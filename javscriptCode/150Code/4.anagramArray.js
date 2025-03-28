@@ -1,3 +1,12 @@
+/*
+4. Group Anagrams
+
+📌 Problem: Group words together if they are anagrams (same letters, different order).
+📝 Example:
+🔹 Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+🔹 Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+*/
+
 function returnArrayAnagram(str) {
     return str.split("").sort().join("");
 }
@@ -22,8 +31,10 @@ function anagramArray(arr) {
     console.time("Anagram Array Values");
     const result = Array.from(map.values());
     console.timeEnd("Anagram Array Values");
+    return result
 
 }
 
 const arr = ["eat", "tea", "tan", "ate", "nat", "bat"];
 console.log(anagramArray(arr));
+//[ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]

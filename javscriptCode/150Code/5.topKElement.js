@@ -1,3 +1,12 @@
+/*
+5. Top K Frequent Elements
+
+📌 Problem: Find the K most common numbers in a list.
+📝 Example:
+🔹 Input: [1, 1, 1, 2, 2, 3], K = 2
+🔹 Output: [1, 2] (because 1 appears 3 times, 2 appears 2 times)
+*/
+
 function topKElement(arr, k) {
     const map = new Map();
     for (let i = 0; i < arr.length; i++) { 

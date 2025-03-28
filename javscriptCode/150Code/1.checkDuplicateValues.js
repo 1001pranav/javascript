@@ -1,3 +1,10 @@
+/*
+📌 Problem: Check if any number appears more than once in a list.
+📝 Example:
+🔹 Input: [1, 2, 3, 1]
+🔹 Output: True (because 1 appears twice)
+*/
+
 function hasDuplicate(arr) {
     return new Set(arr).size !== arr.length;
 }
