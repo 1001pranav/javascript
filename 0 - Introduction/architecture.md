@@ -105,3 +105,141 @@ This design makes Node.js exceptionally good at handling many concurrent connect
 This approach is particularly well-suited for applications that need to handle many simultaneous connections but where each connection doesn't require heavy CPU computation.
 
 Does this explanation help you understand Node.js architecture and the event loop? Would you like me to elaborate on any specific part of how Node.js works?
+
+# Understanding Node.js Event Loop: Call Stack, Callback Queue, and Microtask Queue
+
+Let me explain these core Node.js concepts using everyday analogies to make them easier to understand.
+
+## The Call Stack
+
+Think of the call stack as a stack of plates. When you run JavaScript code, each function you call gets placed on top of this stack. When a function finishes running, it gets removed (popped) from the stack.
+
+For example:
+```javascript
+function greet() {
+  console.log("Hello!");
+}
+
+function welcome() {
+  greet();
+  console.log("Welcome!");
+}
+
+welcome();
+```
+
+Here's what happens on the call stack:
+1. `welcome()` gets placed on the stack
+2. Inside `welcome()`, `greet()` gets placed on top of the stack
+3. `greet()` runs, outputs "Hello!", and gets removed from the stack
+4. `welcome()` continues, outputs "Welcome!", and gets removed from the stack
+
+The call stack processes things synchronously—one function at a time, in order. But what about asynchronous operations?
+
+## The Callback Queue
+
+The callback queue (also called the task queue) is like a waiting line outside a restaurant. Whenever you have asynchronous operations like `setTimeout`, HTTP requests, or file operations, their callback functions go into this queue when they're ready to execute.
+
+Consider this code:
+```javascript
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout finished");
+}, 1000);
+
+console.log("End");
+```
+
+Here's what happens:
+1. "Start" gets logged right away
+2. `setTimeout` gets processed, but its callback function gets sent to wait elsewhere
+3. "End" gets logged
+4. After 1000ms, the timeout callback becomes ready and enters the callback queue
+5. Once the call stack is empty, the callback function moves from the queue to the stack
+6. "Timeout finished" gets logged
+
+This is why we see: "Start", "End", and then "Timeout finished" – even if the timeout is set to 0ms.
+
+## The Microtask Queue
+
+The microtask queue is like a VIP line that gets priority over the regular callback queue. Promises (`.then()`, `.catch()`), `process.nextTick()`, and similar operations place their callbacks in this microtask queue.
+
+The key difference? **All microtasks are processed before the next callback from the regular callback queue.**
+
+Here's an example:
+```javascript
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout callback");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Promise resolved");
+});
+
+console.log("End");
+```
+
+The output will be:
+1. "Start"
+2. "End"
+3. "Promise resolved"
+4. "Timeout callback"
+
+Even though both the timeout and promise resolve essentially immediately, the promise callback (in the microtask queue) gets processed before the timeout callback (in the regular callback queue).
+
+## How They All Work Together
+
+Imagine a restaurant with:
+- One chef (the call stack) who can only cook one dish at a time
+- A regular waiting line (callback queue) for most customers
+- A VIP line (microtask queue) for special customers
+
+Here's how Node.js handles everything:
+1. Execute all synchronous code on the call stack
+2. When the call stack is empty, check if there are any microtasks waiting
+3. Process ALL microtasks until the microtask queue is empty
+4. Take ONE task from the callback queue and process it
+5. Return to step 2 and repeat
+
+This entire process is managed by the "event loop," which continuously checks these queues and coordinates what needs to be executed next.
+
+## Real-World Example
+
+```javascript
+console.log("🏁 Program starts");
+
+// Regular callback queue (setTimeout)
+setTimeout(() => {
+  console.log("⏱️ Timeout 1 done");
+  
+  // This promise gets created during a callback queue task
+  Promise.resolve().then(() => {
+    console.log("🔵 Promise inside timeout");
+  });
+}, 0);
+
+// Microtask queue (Promise)
+Promise.resolve().then(() => {
+  console.log("🟢 Promise 1 resolved");
+  
+  // This setTimeout gets created during a microtask
+  setTimeout(() => {
+    console.log("⏱️ Timeout inside promise");
+  }, 0);
+});
+
+console.log("🏁 Program ends synchronous portion");
+```
+
+The output will be:
+1. "🏁 Program starts"
+2. "🏁 Program ends synchronous portion" 
+3. "🟢 Promise 1 resolved" (microtask queue processed first)
+4. "⏱️ Timeout 1 done" (regular callback queue processed next)
+5. "🔵 Promise inside timeout" (new microtask created during callback processing)
+6. "⏱️ Timeout inside promise" (new callback created during microtask processing)
+
+Understanding these concepts helps you predict the order of execution in Node.js programs and avoid common pitfalls with asynchronous code.
