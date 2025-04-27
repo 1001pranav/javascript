@@ -108,8 +108,6 @@ Does this explanation help you understand Node.js architecture and the event loo
 
 # Understanding Node.js Event Loop: Call Stack, Callback Queue, and Microtask Queue
 
-Let me explain these core Node.js concepts using everyday analogies to make them easier to understand.
-
 ## The Call Stack
 
 Think of the call stack as a stack of plates. When you run JavaScript code, each function you call gets placed on top of this stack. When a function finishes running, it gets removed (popped) from the stack.
