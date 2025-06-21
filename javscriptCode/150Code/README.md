@@ -8,12 +8,12 @@
 - [x] 5. [Top K Frequent Elements](./5.topKElement.js)
 - [x] 6. [Product of Array Except Self](./6.productArrayExceptSelf.js)
 - [ ] 7. [Valid Sudoku](./7.validSudoku.js)
-- [ ] 8. Encode and Decode Strings
-- [ ] 9. Longest Consecutive Sequence
+- [x] 8. [Encode and Decode Strings](./8.encodeDecode.js)
+- [x] 9. [Longest Consecutive Sequence](./9.longestConsicutiveSequence.js)
 
 ## Two Pointers
-- [ ] 10. Valid Palindrome
-- [ ] 11. Two Sum II Input Array Is Sorted
+- [x] 10. [Valid Palindrome](./10.palindrome.js)
+- [x] 11. [Two Sum II Input Array Is Sorted](./11.twoSumSorted.js)
 - [ ] 12. 3Sum
 - [ ] 13. Container With Most Water
 - [ ] 14. Trapping Rain Water
