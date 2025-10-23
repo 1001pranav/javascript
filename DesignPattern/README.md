@@ -27,7 +27,7 @@ These patterns explain how to assemble objects and classes into larger structure
 | :--- | :--- | :--- |
 | **Adapter** | Allows objects with incompatible interfaces to collaborate. | Using a third-party library with a different API by creating a wrapper that conforms to your application's existing interface. |
 | **Decorator** | To add new functionalities to an object dynamically without altering its structure. | Adding logging or caching functionality to an existing data service object. |
-| **Facade** | Provides a simplified interface to a library, a framework, or any other complex set of classes. | A simple API for a complex subsystem, like a single `startServer()` function that handles all the intricacies of setting up a web server. |
+| **[Facade](./StructuralPatterns/facade.js)** | Provides a simplified interface to a library, a framework, or any other complex set of classes. | A simple API for a complex subsystem, like a single `startServer()` function that handles all the intricacies of setting up a web server. |
 | **Proxy** | To provide a surrogate or placeholder for another object to control access to it. | Implementing rate-limiting, caching, or logging for API requests before forwarding them to the actual service. |
 
 -----
