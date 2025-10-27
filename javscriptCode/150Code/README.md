@@ -202,7 +202,7 @@ Output: [1,3]
 ```
 **Time:** O(n) | **Space:** O(1)
 
-### 12. 3Sum
+### 12. [3Sum](./12.3sum.js)
 **Difficulty:** Medium
 **Tags:** Array, Two Pointers
 **Problem:** Given an integer array `nums`, return all unique triplets `[nums[i], nums[j], nums[k]]` where `i != j != k` and they sum to zero.
