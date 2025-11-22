@@ -89,6 +89,51 @@ A comprehensive guide to JavaScript, covering everything from fundamentals to ad
   * Dynamic imports
   * Module best practices
 
+### Node.js
+* [Node.js Overview](/Node.js/README.md) - Complete guide to Node.js runtime
+  * What is Node.js and when to use it
+  * Architecture and event loop
+  * Global objects and process
+  * Asynchronous patterns
+* [Core Modules](/Node.js/core-modules.md) - Built-in Node.js modules
+  * fs - File system operations
+  * path - Path utilities
+  * http/https - HTTP server and client
+  * os - Operating system information
+  * events - EventEmitter
+  * crypto - Cryptography
+* [File System](/Node.js/file-system.md) - Working with files and directories
+  * Reading and writing files
+  * Directory operations
+  * File streams
+  * Watching files
+* [HTTP & Express](/Node.js/http-and-express.md) - Building web servers and APIs
+  * HTTP module basics
+  * Express framework
+  * Routing and middleware
+  * REST API development
+  * Authentication and security
+* [Streams & Buffers](/Node.js/streams-and-buffers.md) - Efficient data handling
+  * Buffer operations
+  * Readable and writable streams
+  * Transform streams
+  * Piping and pipelines
+* [Events](/Node.js/events.md) - Event-driven programming
+  * EventEmitter class
+  * Custom event emitters
+  * Event handling patterns
+* [NPM](/Node.js/npm.md) - Package management
+  * Installing and managing packages
+  * package.json configuration
+  * NPM scripts
+  * Publishing packages
+* [Best Practices](/Node.js/best-practices.md) - Production-ready code
+  * Project structure
+  * Error handling
+  * Security
+  * Performance
+  * Testing
+
 ### Modern JavaScript Features
 
 #### ES2022
