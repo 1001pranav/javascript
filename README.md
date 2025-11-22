@@ -166,6 +166,19 @@ A comprehensive guide to JavaScript, covering everything from fundamentals to ad
   * Interface Segregation Principle
   * Dependency Inversion Principle
 
+### Frameworks
+* [Next.js Cheatsheet](/Frameworks/nextjs-cheatsheet.md) - Complete Next.js 13+ reference
+  * Installation and project structure
+  * App Router and file-based routing
+  * Server and Client Components
+  * Data fetching strategies
+  * API Routes
+  * Styling (Tailwind, CSS Modules)
+  * Images and fonts optimization
+  * Metadata and SEO
+  * Navigation and routing
+  * Deployment
+
 ### Code Practice
 * [Algorithm Implementations](/javscriptCode/Algorithm/)
   * Sorting algorithms (bubble, quick, merge, selection)
